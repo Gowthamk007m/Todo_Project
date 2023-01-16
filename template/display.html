@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<div class="card">
+    <div class="card-header">
+        Task
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-5">
+                <h5 class="card-title">{{i.name}}</h5>
+            </div>
+            <div class="col">
+                <h5 class="card-title">{{i.number}}</h5>
+            </div>
+            <div class="col">
+                <h5 class="card-title">{{i.date}}</h5>
+            </div>
+        </div>
+
+        <br>
+
+        <a href="#" class="btn btn-primary">Update</a>
+        <a style="float:right;" href="#" class="btn btn-primary">Delete</a>
+    </div>
+</div>
+
+{% endblock %}

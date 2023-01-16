@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% block content %}
+<input type=button style="float:right;" value="back" class="" onClick="javascript:history.go(-1);">
+
+
+<div style=" background :#273746 ;" class="container-fluid w-100 p-3">
+  <h2 style="color :#FFFFFF; " align="center">Update Task</h2>
+</div>
+
+<br>
+<br>
+
+
+
+
+<div style=" background-color : #A4A4A4;" align="center">
+    <form method="post">
+
+  {% csrf_token %}
+
+
+    <div class="col-7">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card text-white bg-dark mb-3 ">
+          <div class="shadow card-body">
+            <h5 class="card-title ">Update</h5>
+              <div class="form-group col-md-7">
+      <input type="text" class="form-control" name="name" placeholder="Task name">
+              </div>
+              <div class="form-group col-md-7">
+        <input type="text" class="form-control" name="priority" placeholder="priority">
+                  <br>
+              </div>
+              <a style="align:left;" href="/" class="btn btn-primary">Cancel</a>
+            <span style="padding-left:160px"><button type="submit" class="btn btn-primary">Update</button></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+
+<!--</form>-->
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<div class="container-fluid" style="background-color:red; margin: 20px;">
+
+
+    <div class="row">
+        <div class="col-4">
+            <div style="margin-top:10px; padding-top:10px;">
+
+
+                <form method="post">
+                    {% csrf_token %}
+                    <center>
+                        <h2 style="background-color:blanchedalmond; ">Task</h2>
+                    </center><br>
+
+                    <input type="text" class="form-control" name="task" placeholder="Task Name"><br>
+                    <input type="text" class="form-control" name="number" placeholder="Number"><br>
+                    <input type="date" class="form-control" name="datetime" placeholder="date"><br>
+                    <center><input type="submit" class="btn btn-primary"></center>
+                </form>
+
+            </div>
+        </div>
+        <div class="col-3">
+
+        </div>
+        <div class="col-4 justify-content-end">
+            {% include 'display.html' %}
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
